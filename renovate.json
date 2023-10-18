@@ -5,7 +5,7 @@
     ":automergeMajor",
     "schedule:automergeEarlyMondays",
     "group:all"
-  ]
+  ],
   "packageRules": [
     {
       "matchDatasources": ["npm"],

@@ -6,7 +6,8 @@
 * [fixpack](https://www.npmjs.com/package/fixpack) to normalize package.json changes along with `npm pkg fix`
 * [husky](https://typicode.github.io/husky/) pre commit hooks
 * [changesets](https://github.com/changesets/changesets) change and release workflow
-
+* [renovate](https://github.com/renovatebot/renovate) dependency management
+ 
 ## Installation
 Click the [Use this template](https://github.com/Enalmada/npm-module-template/generate) button to create a new repository 
 (or run `bun create Enalmada/npm-module-template <your-new-library-name>`)

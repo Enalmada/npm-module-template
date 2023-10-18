@@ -33,6 +33,10 @@ To switch existing repository
 ### TODO
 - [ ] tests framework to bun (when bun supports mocking modules)
 
+### Alternative Tech
+* [esbuild](https://github.com/evanw/esbuild/issues/3115)
+* [turbopack](https://blog.bitsrc.io/turbopack-is-vercels-newest-toy-better-than-vite-32abcf95ee43)
+
 ### inspiration
 * [bun-lib-starter](https://github.com/wobsoriano/bun-lib-starter)
 

@@ -1,29 +1,14 @@
+// bun types conflicts with dom types so just putting it where it is needed
 /// <reference types="bun-types" />
 
-import packageJson from './package.json';
-
-function getExternalsFromPackageJson(): string[] {
-  const sections: (keyof typeof packageJson)[] = [
-    'dependencies',
-    'devDependencies',
-    'peerDependencies',
-  ];
-  const externals: string[] = [];
-
-  for (const section of sections) {
-    if (packageJson[section]) {
-      externals.push(...Object.keys(packageJson[section]));
-    }
-  }
-
-  // Removing potential duplicates between dev and peer
-  return Array.from(new Set(externals));
-}
+import getExternalDependencies, { bunBuild } from '@enalmada/bun-externals';
 
 async function buildWithExternals(): Promise<void> {
-  const externalDeps = getExternalsFromPackageJson();
+  // Workaround to make all node_modules as external see: oven-sh/bun#6351
+  const externalDeps = await getExternalDependencies();
 
-  await Bun.build({
+  // bunBuild handles build failure
+  await bunBuild({
     entrypoints: ['./src/index.ts'],
     outdir: './dist',
     target: 'node',
@@ -32,4 +17,4 @@ async function buildWithExternals(): Promise<void> {
   });
 }
 
-buildWithExternals();
+void buildWithExternals();

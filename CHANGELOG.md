@@ -1,5 +1,11 @@
 # @enalmada/storybook-addon-mock-urql
 
+## 0.0.7
+
+### Patch Changes
+
+- 7d5bf51: Updated dependency `lint-staged` to `15.0.2`.
+
 ## 0.0.6
 
 ### Patch Changes

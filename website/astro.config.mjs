@@ -6,8 +6,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://enalmada.github.io',
-  base: '/npm-module-template',
   integrations: [
     starlight({
       title: 'npm-module-template',

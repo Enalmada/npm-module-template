@@ -18,7 +18,7 @@ Click the [Use this template](https://github.com/Enalmada/npm-module-template/ge
 (or run `bun create Enalmada/npm-module-template <your-new-library-name>`)
 
 ## Documentation
-Read the documentation [website](https://npm-module-template-adam-lane.vercel.app/)
+Read the documentation [website](https://npm-module-template.vercel.app/)
 
 ### TODO
 - [ ] tests framework to bun (when bun supports mocking modules)

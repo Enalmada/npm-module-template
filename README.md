@@ -12,31 +12,11 @@
 Click the [Use this template](https://github.com/Enalmada/npm-module-template/generate) button to create a new repository 
 (or run `bun create Enalmada/npm-module-template <your-new-library-name>`)
 
-To switch existing repository 
-* `git remote add template https://github.com/Enalmada/npm-module-template`
-* `git fetch template`
-* `git merge template/main --allow-unrelated-histories`
-* resolve conflicts and merge
-
-### Github settings
-* add NPM_TOKEN with access to deploy to npm to environment variables
-* Actions > General > Workflow Permissions
-  * Read and Write (to allow changesets to create changelog, and release)
-  * Allow github actions to create and approve PR
-
-## Workflow
-* install dependencies `bun install`
-* lint files `bun lint:fix`
-* run tests `bun run test` (not `bun test` as we are not using native tests)
-* run build `bun run build` (not `bun build` as we are using build script)
-* create changeset before PR `changeset` and choose appropriate semver and changelog
+## Documentation
+Read the documentation
 
 ### TODO
 - [ ] tests framework to bun (when bun supports mocking modules)
-
-### Alternative Tech
-* [esbuild](https://github.com/evanw/esbuild/issues/3115)
-* [turbopack](https://blog.bitsrc.io/turbopack-is-vercels-newest-toy-better-than-vite-32abcf95ee43)
 
 ### inspiration
 * [bun-lib-starter](https://github.com/wobsoriano/bun-lib-starter)

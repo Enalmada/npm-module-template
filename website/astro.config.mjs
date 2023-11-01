@@ -1,3 +1,4 @@
+import cloudflare from '@astrojs/cloudflare';
 import prefetch from '@astrojs/prefetch';
 import react from '@astrojs/react';
 import starlight from '@astrojs/starlight';
@@ -9,13 +10,15 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'npm-module-template',
-      defaultLocale: 'root', // optional
+      defaultLocale: 'root',
+      // optional
       locales: {
         root: {
           label: 'English',
           lang: 'en', // lang is required for root locales
         },
       },
+
       social: {
         github: 'https://github.com/Enalmada/npm-module-template',
       },
@@ -55,4 +58,6 @@ export default defineConfig({
     }),
     prefetch(),
   ],
+  output: 'server',
+  adapter: cloudflare({ mode: 'directory' }),
 });

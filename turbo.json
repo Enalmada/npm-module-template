@@ -1,39 +1,29 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
-    "build:clear": {
-      "cache": false,
-      "outputMode": "new-only"
-    },
-    "build:declaration": {
-      "dependsOn": ["build:script"],
-      "outputs": ["dist/**"],
-      "outputMode": "new-only"
-    },
-    "build:script": {
-      "dependsOn": ["build:clear"],
-      "outputs": ["dist/**"],
-      "outputMode": "new-only"
-    },
-    "test": {
-      "inputs": ["src/**/*.tsx", "src/**/*.ts"],
-      "outputMode": "new-only"
-    },
-    "test:unit": {
-      "inputs": ["src/**/*.tsx", "src/**/*.ts"],
-      "outputMode": "new-only"
-    },
-    "format": {
-      "outputMode": "new-only"
-    },
-    "lint": {
-      "outputMode": "new-only"
-    },
-    "check-types": {},
-    "dev:install": {
-      "inputs": ["package.json", "bun.lockb"],
-      "outputMode": "new-only"
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": ["**/.env.*local"],
+	"tasks": {
+		"build:clear": {
+			"cache": false
+		},
+		"build:declaration": {
+			"dependsOn": ["build:script"],
+			"outputs": ["dist/**"]
+		},
+		"build:script": {
+			"dependsOn": ["build:clear"],
+			"outputs": ["dist/**"]
+		},
+		"test": {
+			"inputs": ["src/**/*.tsx", "src/**/*.ts"]
+		},
+		"test:unit": {
+			"inputs": ["src/**/*.tsx", "src/**/*.ts"]
+		},
+		"format": {},
+		"lint": {},
+		"check-types": {},
+		"dev:install": {
+			"inputs": ["package.json", "bun.lockb"]
+		}
+	}
 }

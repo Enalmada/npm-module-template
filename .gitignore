@@ -9,6 +9,7 @@ lib
 tmp
 package-lock.json
 .vercel
+.codebuddy
 
 # Turbo
 .turbo/

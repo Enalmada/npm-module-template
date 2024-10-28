@@ -1,6 +1,6 @@
 {
 	"name": "@enalmada/npm-module-template",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"scripts": {
 		"build": "turbo build:clear build:script build:declaration",
 		"build:clear": "rm -rf dist",

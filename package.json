@@ -19,14 +19,14 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@changesets/cli": "2.27.10",
-		"@enalmada/bun-externals": "0.0.7",
+		"@changesets/cli": "2.27.11",
+		"@enalmada/bun-externals": "0.0.8",
 		"@scaleway/changesets-renovate": "2.1.2",
-		"@types/node": "22.10.1",
+		"@types/node": "22.10.2",
 		"cross-env": "7.0.3",
 		"fixpack": "4.0.0",
 		"husky": "9.1.7",
-		"lint-staged": "15.2.10",
+		"lint-staged": "15.2.11",
 		"turbo": "2.3.3",
 		"typescript": "5.7.2",
 		"vitest": "2.1.8"

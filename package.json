@@ -22,14 +22,14 @@
 		"@changesets/cli": "2.29.4",
 		"@enalmada/bun-externals": "0.0.8",
 		"@scaleway/changesets-renovate": "2.2.0",
-		"@types/node": "22.15.17",
+		"@types/node": "22.15.21",
 		"cross-env": "7.0.3",
 		"fixpack": "4.0.0",
 		"husky": "9.1.7",
 		"lint-staged": "16.0.0",
 		"turbo": "2.5.3",
 		"typescript": "5.8.3",
-		"vitest": "3.1.3"
+		"vitest": "3.1.4"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

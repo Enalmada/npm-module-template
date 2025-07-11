@@ -18,11 +18,11 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@biomejs/biome": "2.1.0",
+		"@biomejs/biome": "2.1.1",
 		"@changesets/cli": "2.29.5",
 		"@enalmada/bun-externals": "0.0.8",
 		"@scaleway/changesets-renovate": "2.2.1",
-		"@types/node": "24.0.10",
+		"@types/node": "24.0.11",
 		"cross-env": "7.0.3",
 		"fixpack": "4.0.0",
 		"husky": "9.1.7",

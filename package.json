@@ -22,11 +22,11 @@
 		"@changesets/cli": "2.29.5",
 		"@enalmada/bun-externals": "0.0.8",
 		"@scaleway/changesets-renovate": "2.2.1",
-		"@types/node": "24.2.0",
+		"@types/node": "24.2.1",
 		"cross-env": "10.0.0",
 		"fixpack": "4.0.0",
 		"husky": "9.1.7",
-		"lint-staged": "16.1.4",
+		"lint-staged": "16.1.5",
 		"turbo": "2.5.5",
 		"typescript": "5.9.2",
 		"vitest": "3.2.4"

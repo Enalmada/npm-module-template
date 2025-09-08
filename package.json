@@ -18,7 +18,7 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.2",
+		"@biomejs/biome": "2.2.3",
 		"@changesets/cli": "2.29.6",
 		"@enalmada/bun-externals": "0.0.8",
 		"@scaleway/changesets-renovate": "2.2.1",

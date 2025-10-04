@@ -22,7 +22,7 @@
 		"@changesets/cli": "2.29.7",
 		"@enalmada/bun-externals": "0.0.8",
 		"@scaleway/changesets-renovate": "2.2.1",
-		"@types/node": "24.6.0",
+		"@types/node": "24.6.1",
 		"cross-env": "10.1.0",
 		"fixpack": "4.0.0",
 		"husky": "9.1.7",

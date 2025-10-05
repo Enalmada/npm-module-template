@@ -12,7 +12,7 @@
 		"lint": "biome check --fix --unsafe",
 		"prepare": "lefthook install",
 		"release": "bun run build && bunx changeset publish",
-		"test": "turbo test",
+		"test": "turbo test:unit",
 		"test:unit": "cross-env NODE_ENV=test vitest",
 		"type-check": "bun --bun tsc --noEmit"
 	},

@@ -2,6 +2,10 @@
 	"$schema": "https://turbo.build/schema.json",
 	"ui": "tui",
 	"tasks": {
+		"build": {
+			"dependsOn": ["build:clear", "build:script", "build:declaration"],
+			"outputs": ["dist/**"]
+		},
 		"build:clear": {
 			"cache": false
 		},

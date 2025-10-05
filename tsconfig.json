@@ -1,27 +1,39 @@
 {
 	"compilerOptions": {
+		// Module configuration
 		"module": "ES2022",
-		"moduleResolution": "node",
+		"moduleResolution": "Bundler",
 		"target": "ES2022",
 		"lib": ["ES2022"],
 		"types": ["vitest/globals"],
 
+		// Emit configuration
 		"declaration": true,
+		"noEmit": false,
+		"isolatedModules": true,
+
+		// Type checking
+		"strict": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"exactOptionalPropertyTypes": true,
+
+		// Module resolution
 		"allowJs": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
-		"noUnusedLocals": true,
-		"noImplicitAny": true,
 		"resolveJsonModule": true,
-
-		// best practices
-		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
 
-		// locations
+		// Path configuration
 		"outDir": "./dist",
-		"rootDir": "./src"
+		"rootDir": "./src",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx"],
 	"exclude": ["dist", "node_modules", "test"]

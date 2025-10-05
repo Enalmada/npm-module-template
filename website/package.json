@@ -29,8 +29,14 @@
 	},
 	"description": "module website",
 	"type": "module",
-	"trustedDependencies": ["sharp"],
+	"trustedDependencies": [
+		"sharp"
+	],
 	"author": "",
 	"packageManager": "bun@1.1.33",
-	"license": "UNLICENSED"
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.1.14",
+		"@tailwindcss/vite": "^4.1.14"
+	}
 }

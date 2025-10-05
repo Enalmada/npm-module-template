@@ -6,6 +6,7 @@ yarn-error.log
 .idea
 .env
 lib
+dist
 tmp
 package-lock.json
 .vercel
@@ -13,3 +14,6 @@ package-lock.json
 
 # Turbo
 .turbo/
+
+# Session docs (temporary working notes)
+docs/session/

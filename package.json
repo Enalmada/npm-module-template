@@ -3,14 +3,14 @@
 	"version": "0.0.8",
 	"scripts": {
 		"build": "turbo build:clear build:script build:declaration",
-		"build:clear": "rm -rf dist",
+		"build:clear": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
 		"build:declaration": "tsc --emitDeclarationOnly",
 		"build:pack": "bun run build && npm pack",
 		"build:script": "cross-env NODE_ENV=production bun build.ts",
+		"check": "turbo lint type-check test:unit",
 		"dev:website": "cd website && bun run dev",
 		"lint": "biome check --fix --unsafe",
-		"pre-commit": "bun lint-staged",
-		"prepare": "husky install",
+		"prepare": "lefthook install",
 		"release": "bun run build && bunx changeset publish",
 		"test": "turbo test:unit",
 		"test:unit": "cross-env NODE_ENV=test vitest",
@@ -20,19 +20,25 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.5",
 		"@changesets/cli": "2.29.7",
-		"@enalmada/bun-externals": "0.0.8",
+		"@enalmada/bun-externals": "0.0.9",
 		"@scaleway/changesets-renovate": "2.2.1",
 		"@types/node": "24.6.2",
 		"cross-env": "10.1.0",
 		"fixpack": "4.0.0",
-		"husky": "9.1.7",
-		"lint-staged": "16.2.3",
+		"lefthook": "^1.13.6",
 		"turbo": "2.5.8",
 		"typescript": "5.9.3",
 		"vitest": "3.2.4"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
 	"author": "Adam Lane",
 	"description": "npm module template",
 	"keywords": [
@@ -55,7 +61,14 @@
 		"access": "public"
 	},
 	"type": "module",
-	"packageManager": "bun@1.1.33",
+	"sideEffects": false,
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"files": [
+		"dist"
+	],
+	"packageManager": "bun@1.2.23",
 	"trustedDependencies": [
 		"@biomejs/biome"
 	]

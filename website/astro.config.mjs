@@ -1,7 +1,7 @@
 import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
-import tailwind from "@astrojs/tailwind";
+import tailwindcssVite from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 // https://astro.build/config
@@ -16,9 +16,13 @@ export default defineConfig({
 					lang: "en", // lang is required for root locales
 				},
 			},
-			social: {
-				github: "https://github.com/Enalmada/npm-module-template",
-			},
+			social: [
+				{
+					icon: "github",
+					label: "GitHub",
+					href: "https://github.com/Enalmada/npm-module-template",
+				},
+			],
 			sidebar: [
 				{
 					label: "Getting Started",
@@ -50,10 +54,7 @@ export default defineConfig({
 			customCss: ["./src/assets/landing.css", "./src/tailwind.css"],
 		}),
 		react(),
-		// applyBaseStyles causes lists to not work anymore
-		tailwind({
-			applyBaseStyles: false,
-		}),
 		prefetch(),
+		tailwindcssVite(),
 	],
 });

@@ -3,11 +3,11 @@
 A starter template for npm modules.  Currently setup with the following tech:
 
 * [bun](https://bun.sh/docs/bundler) build - with types the best I could (see build notes below)
-* [lint-staged](https://www.npmjs.com/package/lint-staged) check git staged files
 * [vitest](https://vitest.dev/) test framework
-* [eslint](https://eslint.org/) with [prettier](https://prettier.io/) formatting
+* [biome](https://biomejs.dev/) for linting and formatting
 * [fixpack](https://www.npmjs.com/package/fixpack) to normalize package.json changes along with `npm pkg fix`
-* [husky](https://typicode.github.io/husky/) pre commit hooks
+* [lefthook](https://github.com/evilmartians/lefthook) pre commit hooks
+* [turbo](https://turbo.build/) task orchestration and caching
 * [changesets](https://github.com/changesets/changesets) change and release workflow
 * [renovate](https://github.com/renovatebot/renovate) dependency management
 * [Github Actions](https://github.com/features/actions)

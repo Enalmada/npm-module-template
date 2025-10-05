@@ -1,6 +1,5 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"globalDependencies": ["**/.env.*local"],
 	"tasks": {
 		"build:clear": {
 			"cache": false
@@ -13,17 +12,14 @@
 			"dependsOn": ["build:clear"],
 			"outputs": ["dist/**"]
 		},
-		"test": {
-			"inputs": ["src/**/*.tsx", "src/**/*.ts"]
+		"lint": {
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "biome.jsonc"]
 		},
 		"test:unit": {
-			"inputs": ["src/**/*.tsx", "src/**/*.ts"]
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "vitest.config.ts"]
 		},
-		"format": {},
-		"lint": {},
-		"check-types": {},
-		"dev:install": {
-			"inputs": ["package.json", "bun.lockb"]
+		"type-check": {
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "tsconfig.json"]
 		}
 	}
 }

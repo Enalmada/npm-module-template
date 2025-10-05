@@ -6,6 +6,7 @@ yarn-error.log
 .idea
 .env
 lib
+dist
 tmp
 package-lock.json
 .vercel

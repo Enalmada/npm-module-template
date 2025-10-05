@@ -1,7 +1,7 @@
 pre-commit:
   parallel: true
   skip:
-    - run: test "$CI" = "true"
+    - run: test -n "$CI"
       reason: "Skipping hooks in CI environment"
   commands:
     type-check:

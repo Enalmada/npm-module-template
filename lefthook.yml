@@ -1,5 +1,8 @@
 pre-commit:
   parallel: true
+  skip:
+    - run: test "$CI" = "true"
+      reason: "Skipping hooks in CI environment"
   commands:
     type-check:
       glob: "**/*.{ts,tsx}"
@@ -7,7 +10,7 @@ pre-commit:
       fail_text: "❌ TypeScript errors found! Run 'bun run type-check' to see details."
 
     lint:
-      glob: "*.{js,ts,cjs,mjs,jsx,tsx,json}"
+      glob: "**/*.{js,ts,cjs,mjs,jsx,tsx,json}"
       run: biome check --fix --unsafe {staged_files}
       stage_fixed: true
       fail_text: "❌ Linting errors found! Most have been auto-fixed. Please review the changes and commit again."

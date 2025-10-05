@@ -14,3 +14,6 @@ package-lock.json
 
 # Turbo
 .turbo/
+
+# Session docs (temporary working notes)
+docs/session/

@@ -18,14 +18,14 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.5",
+		"@biomejs/biome": "2.2.6",
 		"@changesets/cli": "2.29.7",
 		"@enalmada/bun-externals": "0.0.9",
 		"@scaleway/changesets-renovate": "2.2.1",
-		"@types/node": "24.6.2",
+		"@types/node": "24.7.2",
 		"cross-env": "10.1.0",
 		"fixpack": "4.0.0",
-		"lefthook": "^1.13.6",
+		"lefthook": "1.13.6",
 		"turbo": "2.5.8",
 		"typescript": "5.9.3",
 		"vitest": "3.2.4"

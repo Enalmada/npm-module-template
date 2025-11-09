@@ -13,32 +13,25 @@
 		"prepare": "lefthook install",
 		"release": "bun run build && bunx changeset publish",
 		"test": "turbo test:unit",
-		"test:unit": "cross-env NODE_ENV=test vitest",
+		"test:unit": "cross-env NODE_ENV=test vitest run",
 		"type-check": "bun --bun tsc --noEmit"
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.6",
+		"@biomejs/biome": "2.3.4",
 		"@changesets/cli": "2.29.7",
 		"@enalmada/bun-externals": "0.0.9",
 		"@scaleway/changesets-renovate": "2.2.1",
-		"@types/node": "24.8.1",
+		"@types/node": "24.10.0",
 		"cross-env": "10.1.0",
 		"fixpack": "4.0.0",
-		"lefthook": "1.13.6",
-		"turbo": "2.5.8",
+		"lefthook": "2.0.2",
+		"turbo": "2.6.0",
 		"typescript": "5.9.3",
-		"vitest": "3.2.4"
+		"vitest": "4.0.8"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js",
-			"default": "./dist/index.js"
-		}
-	},
 	"author": "Adam Lane",
 	"description": "npm module template",
 	"keywords": [
@@ -61,14 +54,21 @@
 		"access": "public"
 	},
 	"type": "module",
-	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
 	"engines": {
 		"node": ">=22.0.0"
 	},
 	"files": [
 		"dist"
 	],
-	"packageManager": "bun@1.2.23",
+	"packageManager": "bun@1.3.2",
+	"sideEffects": false,
 	"trustedDependencies": [
 		"@biomejs/biome"
 	]

@@ -3,7 +3,7 @@
 	"ui": "tui",
 	"tasks": {
 		"build": {
-			"dependsOn": ["build:clear", "build:script", "build:declaration"],
+			"dependsOn": ["build:clear", "build:script", "build:declaration", "build:validate"],
 			"outputs": ["dist/**"]
 		},
 		"build:clear": {
@@ -16,6 +16,10 @@
 		"build:script": {
 			"dependsOn": ["build:clear"],
 			"outputs": ["dist/**"]
+		},
+		"build:validate": {
+			"dependsOn": ["build:declaration"],
+			"inputs": ["package.json", "dist/**"]
 		},
 		"lint": {
 			"inputs": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "biome.jsonc"]

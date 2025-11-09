@@ -2,11 +2,12 @@
 	"name": "@enalmada/npm-module-template",
 	"version": "0.1.0",
 	"scripts": {
-		"build": "turbo build:clear build:script build:declaration",
+		"build": "turbo build:clear build:script build:declaration build:validate",
 		"build:clear": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
 		"build:declaration": "tsc --emitDeclarationOnly",
 		"build:pack": "bun run build && npm pack",
 		"build:script": "cross-env NODE_ENV=production bun build.ts",
+		"build:validate": "publint --strict",
 		"check": "turbo lint type-check test:unit",
 		"dev:website": "cd website && bun run dev",
 		"lint": "biome check --fix --unsafe",
@@ -26,6 +27,7 @@
 		"cross-env": "10.1.0",
 		"fixpack": "4.0.0",
 		"lefthook": "2.0.2",
+		"publint": "^0.3.15",
 		"turbo": "2.6.0",
 		"typescript": "5.9.3",
 		"vitest": "4.0.8"

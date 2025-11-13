@@ -26,8 +26,8 @@
 		"@types/node": "24.10.0",
 		"cross-env": "10.1.0",
 		"fixpack": "4.0.0",
-		"lefthook": "2.0.2",
-		"publint": "^0.3.15",
+		"lefthook": "2.0.3",
+		"publint": "0.3.15",
 		"turbo": "2.6.0",
 		"typescript": "5.9.3",
 		"vitest": "4.0.8"

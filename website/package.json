@@ -12,19 +12,19 @@
 		"type-check": "bun --bun tsc --noEmit"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.9.5",
+		"@astrojs/check": "0.9.6",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/react": "4.4.2",
-		"@astrojs/starlight": "0.36.2",
+		"@astrojs/starlight": "0.37.1",
 		"@astrojs/starlight-tailwind": "4.0.2",
 		"@astrojs/tailwind": "6.0.2",
-		"@types/react": "19.2.2",
-		"@types/react-dom": "19.2.2",
-		"astro": "5.15.5",
-		"react": "19.2.0",
-		"react-dom": "19.2.0",
+		"@types/react": "19.2.7",
+		"@types/react-dom": "19.2.3",
+		"astro": "5.16.6",
+		"react": "19.2.3",
+		"react-dom": "19.2.3",
 		"sharp": "0.34.5",
-		"tailwindcss": "4.1.17",
+		"tailwindcss": "4.1.18",
 		"typescript": "5.9.3"
 	},
 	"description": "module website",
@@ -36,7 +36,7 @@
 	"packageManager": "bun@1.1.33",
 	"license": "UNLICENSED",
 	"devDependencies": {
-		"@tailwindcss/postcss": "4.1.17",
-		"@tailwindcss/vite": "4.1.17"
+		"@tailwindcss/postcss": "4.1.18",
+		"@tailwindcss/vite": "4.1.18"
 	}
 }

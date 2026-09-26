@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Biome
         uses: biomejs/setup-biome@v2
         with:
-          version: 2.2.5
+          version: 2.5.14
 
       - name: Run Biome
         run: biome ci .
